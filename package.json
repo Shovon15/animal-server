@@ -1,0 +1,23 @@
+{
+  "name": "animal-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/app",
+    "dev": "nodemon ./src/app.js",
+    "vercel-build": "echo hello",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.5.4",
+    "nodemon": "^3.1.4"
+  }
+}
