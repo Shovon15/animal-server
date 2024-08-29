@@ -37,9 +37,9 @@ app.use((err, req, res, next) => {
 		message: err.message,
 	});
 });
+connectDB();
 
 app.listen(serverPort, async () => {
-	connectDB();
 	console.log(`server running on ${serverPort}`);
 });
 
