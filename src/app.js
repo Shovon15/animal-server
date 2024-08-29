@@ -25,7 +25,6 @@ app.get("/", (req, res) => {
 	});
 });
 
-
 //client error--------------------
 app.use((req, res, next) => {
 	next(createHttpError(404, "Route not found."));
