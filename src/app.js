@@ -2,9 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const { errorResponse } = require("./controllers/responseController");
 const createHttpError = require("http-errors");
-const taskRouter = require("./routers/taskRouter");
 const { serverPort } = require("./secret");
 const connectDB = require("./config/db");
+const categoryRouter = require("./routers/categoryRouter");
+const animalRouter = require("./routers/animalRouter");
 
 
 const app = express();
@@ -14,7 +15,8 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/api/task", taskRouter);
+app.use("/api/category", categoryRouter);
+app.use("/api/animal", animalRouter);
 
 //welcome route-------------
 app.get("/", (req, res) => {
